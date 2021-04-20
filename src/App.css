@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  vertical-align: middle;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* BODY */
+body {
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__left img {
+  width: 50px;
+}
+
+.header__right .info {
+  display: flex;
+  align-items: center;
+}
+
+.header__right .info p {
+  color: yellowgreen;
+}
+
+.header__right form {
+  display: flex;
+  align-items: center;
+}
+
+.header__right button {
+  background: yellowgreen;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 80px;
+  height: 30px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.header__right button:focus {
+  outline: none;
+}
+
+.header__right input {
+  height: 30px;
+  padding: 10px;
+}
+
+.header__right input:focus {
+  outline: none;
+}
+
+/* CONTROLLER */
+.controller {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 40px 0;
+}
+
+.controller__group button {
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 80px;
+  height: 30px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.controller__group button:focus {
+  outline: none;
+}
+
+.controller__group button.blue {
+  background: skyblue;
+}
+
+.controller__group button.red {
+  background: orange;
+}
+
+.controller__group input {
+  background: lightgreen;
+  border-radius: 5px;
+  border: none;
+  width: 80px;
+  height: 30px;
+  padding: 10px;
+}
+
+.controller__group input:focus {
+  outline: none;
+}
+
+.controller__num {
+  padding-top: 40px;
+}
+
+/* BOX */
+.box {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.box:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.box h1,
+.box p {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.box input {
+  border: none;
+  border-radius: 5px;
+  width: 120px;
+  height: 30px;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box input:focus {
+  outline: none;
 }
